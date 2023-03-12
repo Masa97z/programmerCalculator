@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smallCorner">8dp</dimen>
+    <dimen name="normalCorner">16dp</dimen>
+    <dimen name="largeCorner">64dp</dimen>
+    <dimen name="widethview">48dp</dimen>
+    <dimen name="heightview">32dp</dimen>
+    <dimen name="magenlarge">96dp</dimen>
+    <dimen name="margenmediem">16dp</dimen>
+    <dimen name="magennormal">8dp</dimen>
+    <dimen name="btnSize">64dp</dimen>
+</resources>
