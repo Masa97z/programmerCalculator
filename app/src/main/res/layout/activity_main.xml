@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FAFAFA"
     tools:context=".MainActivity"
-    android:paddingStart="24dp">
+    android:paddingStart="28dp">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/remove"
@@ -149,6 +149,7 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/btnaction"
         android:text="@string/a"
+        android:onClick="onClickBtn"
         app:layout_constraintBottom_toBottomOf="@+id/dijtb"
         app:layout_constraintEnd_toStartOf="@+id/dijtb" />
 
@@ -194,70 +195,15 @@
         app:layout_constraintTop_toBottomOf="@+id/inputNumber" />
 
     <TextView
-        android:id="@+id/hexview"
-        style="@style/viewDijit"
-        android:layout_width="@dimen/widethview"
-        android:layout_height="@dimen/heightview"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:layout_marginTop="80dp"
-        android:text="@string/hex"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/binview"
-        style="@style/viewDijit"
-        android:layout_width="@dimen/widethview"
-        android:layout_height="@dimen/heightview"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:layout_marginTop="@dimen/magennormal"
-        android:text="@string/bin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hexview" />
-
-    <TextView
-        android:id="@+id/octview"
-        style="@style/viewDijit"
-        android:layout_width="@dimen/widethview"
-        android:layout_height="@dimen/heightview"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:layout_marginTop="@dimen/magennormal"
-        android:text="@string/oct"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/binview" />
-
-    <TextView
-        android:id="@+id/decview"
-        style="@style/viewDijit"
-        android:layout_width="@dimen/widethview"
-        android:layout_height="@dimen/heightview"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:layout_marginTop="@dimen/magennormal"
-        android:text="@string/dec"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/octview" />
-
-    <TextView
-        android:id="@+id/inputtitle"
-        style="@style/viewDijit"
-        android:layout_width="@dimen/widethview"
-        android:layout_height="@dimen/heightview"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:layout_marginTop="32dp"
-        android:text="@string/in"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decview" />
-
-    <TextView
         android:id="@+id/inputNumber"
         style="@style/inputnumber"
         android:layout_width="240dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/magennormal"
-        android:text="@string/_11223"
-        app:layout_constraintStart_toEndOf="@+id/inputtitle"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
@@ -265,10 +211,11 @@
         style="@style/inputnumber"
         android:layout_width="240dp"
         android:layout_height="168dp"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:layout_marginTop="73dp"
+        android:layout_marginTop="84dp"
         android:text=""
-        app:layout_constraintStart_toEndOf="@+id/octview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -297,7 +244,7 @@
         android:layout_height="@dimen/btnSize"
         android:layout_marginEnd="16dp"
         android:background="@drawable/btnaction"
-        android:text="4"
+        android:text="@string/_4"
         app:layout_constraintBottom_toBottomOf="@+id/num5"
         app:layout_constraintEnd_toStartOf="@+id/num5"
         app:layout_constraintStart_toStartOf="@+id/num9" />
