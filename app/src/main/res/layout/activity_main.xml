@@ -1,273 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
     tools:context=".MainActivity"
-    android:paddingStart="28dp">
+    android:orientation="vertical"
+    android:background="#fafafa"
+    android:paddingStart="@dimen/margenmediem"
+    android:paddingEnd="@dimen/margenmediem"
+    >
+<TextView
+    android:id="@+id/inputtext"
+    style="@style/inputnumber"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="84dp"
+    android:text=""
+    android:layout_weight="1"
+    android:layout_gravity="start|top"
+    android:paddingTop="@dimen/magenlarge" android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="@color/white"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/remove"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/ac"
-        app:layout_constraintEnd_toEndOf="@+id/deleteBtn"
-        app:layout_constraintTop_toBottomOf="@+id/deleteBtn" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/zero"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="@+id/remove"
-        app:layout_constraintEnd_toStartOf="@+id/remove" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/deleteBtn"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/del"
-        app:layout_constraintEnd_toEndOf="@+id/dijtf"
-        app:layout_constraintTop_toBottomOf="@+id/dijtf" />
+    <LinearLayout
+        android:id="@+id/convertingTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/magennormal"
+        android:layout_marginTop="@dimen/margenmediem">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num3"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/_3"
-        app:layout_constraintBottom_toBottomOf="@+id/deleteBtn"
-        app:layout_constraintEnd_toStartOf="@+id/deleteBtn" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/binBtn"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:layout_marginStart="@dimen/margenmediem"
+            android:background="@drawable/btnaction"
+            android:text="@string/bin"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/octBtn"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:layout_marginStart="@dimen/margenmediem"
+            android:background="@drawable/btnaction"
+            android:text="@string/oct"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/decBtn"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:layout_marginStart="@dimen/margenmediem"
+            android:background="@drawable/btnaction"
+            android:text="@string/dec"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hexbtn"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/btnaction"
+            android:text="@string/hex"/>
+    </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num22"
-        android:layout_width="144dp"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/equal"
-        app:layout_constraintBottom_toBottomOf="@+id/zero"
-        app:layout_constraintEnd_toStartOf="@+id/zero" />
+    <!-- <View
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+         android:background="#FF0000"
+         android:layout_marginBottom="@dimen/smallSpace" />-->
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num8"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/_8"
-        app:layout_constraintBottom_toBottomOf="@+id/num99"
-        app:layout_constraintEnd_toStartOf="@+id/num99"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/num9" />
+    <LinearLayout
+        android:id="@+id/hexButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num99"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/_9"
-        app:layout_constraintBottom_toBottomOf="@+id/dijte"
-        app:layout_constraintEnd_toStartOf="@+id/dijte"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/num8" />
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num9"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:background="@drawable/btnaction"
-        android:text="@string/_7"
-        app:layout_constraintBottom_toBottomOf="@+id/num8"
-        app:layout_constraintStart_toStartOf="@+id/dijta" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dijta"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:background="@drawable/btnaction"
+            android:text="@string/a"
+            android:onClick="onClickNumber"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dijtb"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:background="@drawable/btnaction"
+            android:text="@string/b"
+            android:onClick="onClickNumber"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dijtc"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:background="@drawable/btnaction"
+            android:text="@string/c"
+            android:onClick="onClickNumber"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dijtd"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:background="@drawable/btnaction"
+            android:text="@string/d"
+            android:onClick="onClickNumber"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dijte"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dijtf"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/f"
-        app:layout_constraintEnd_toEndOf="@+id/dijte"
-        app:layout_constraintTop_toBottomOf="@+id/dijte" />
+            android:background="@drawable/btnaction"
+            android:text="@string/e"
+            android:onClick="onClickNumber"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dijtf"
+            android:layout_width="@dimen/btnSize"
+            android:layout_height="@dimen/btnSize"
+            android:background="@drawable/btnaction"
+            android:text="@string/f"
+            android:onClick="onClickNumber"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dijte"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/e"
-        app:layout_constraintStart_toEndOf="@+id/num99"
-        app:layout_constraintTop_toBottomOf="@+id/dijtd" />
+    </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dijtd"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/d"
-        app:layout_constraintEnd_toEndOf="@+id/decBtn"
-        app:layout_constraintTop_toBottomOf="@+id/decBtn" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="-28dp">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dijtb"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/b"
-        app:layout_constraintBottom_toBottomOf="@+id/dijtc"
-        app:layout_constraintEnd_toStartOf="@+id/dijtc" />
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center|top"
+            android:paddingTop="@dimen/magennormal"
+            >
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dijtc"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/c"
-        app:layout_constraintBottom_toBottomOf="@+id/dijtd"
-        app:layout_constraintEnd_toStartOf="@+id/dijtd" />
+            <LinearLayout
+                android:id="@+id/firstRow"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margenmediem"
+                android:gravity="center"
+                android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dijta"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/a"
-        android:onClick="onClickBtn"
-        app:layout_constraintBottom_toBottomOf="@+id/dijtb"
-        app:layout_constraintEnd_toStartOf="@+id/dijtb" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num9"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:background="@drawable/btnaction"
+                    android:text="@string/_7"
+                    android:layout_marginTop="16dp"
+                    android:onClick="onClickNumber"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num4"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:background="@drawable/btnaction"
+                    android:text="@string/_4"
+                    android:layout_marginTop="16dp"
+                    android:onClick="onClickNumber"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num1"
+                    android:layout_width="@dimen/btnSize"
+                    android:background="@drawable/btnaction"
+                    android:text="1"
+                    android:layout_marginTop="16dp"
+                    android:onClick="onClickNumber"
+                    android:layout_height="@dimen/btnSize"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/result"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btnaction"
+                    android:text="@string/equal"
+                    />
+            </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/binBtn"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:background="@drawable/btnaction"
-        android:text="@string/bin"
-        app:layout_constraintBottom_toBottomOf="@+id/octBtn"
-        app:layout_constraintStart_toEndOf="@+id/hexbtn" />
+            <LinearLayout
+                android:id="@+id/secondRow"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margenmediem"
+                android:layout_marginEnd="@dimen/margenmediem"
+                android:gravity="center"
+                android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/octBtn"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:background="@drawable/btnaction"
-        android:text="@string/oct"
-        app:layout_constraintBottom_toBottomOf="@+id/decBtn"
-        app:layout_constraintStart_toEndOf="@+id/binBtn" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num8"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:background="@drawable/btnaction"
+                    android:text="@string/_8"
+                    android:layout_marginTop="16dp"
+                    android:onClick="onClickNumber"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/hexbtn"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/hex"
-        app:layout_constraintBottom_toBottomOf="@+id/binBtn"
-        app:layout_constraintStart_toStartOf="parent" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num5"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btnaction"
+                    android:text="5"
+                    android:onClick="onClickNumber"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/decBtn"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginStart="@dimen/margenmediem"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/dec"
-        app:layout_constraintStart_toEndOf="@+id/octBtn"
-        app:layout_constraintTop_toBottomOf="@+id/inputNumber" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num2"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btnaction"
+                    android:text="2"
+                    android:onClick="onClickNumber"/>
 
-    <TextView
-        android:id="@+id/inputNumber"
-        style="@style/inputnumber"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="@dimen/magennormal"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.379"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/zero"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btnaction"
+                    android:text="0"
+                    android:onClick="onClickNumber"/>
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView8"
-        style="@style/inputnumber"
-        android:layout_width="240dp"
-        android:layout_height="168dp"
-        android:layout_marginTop="84dp"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margenmediem"
+                android:layout_marginEnd="@dimen/margenmediem"
+                android:gravity="center"
+                android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num6"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="6"
-        app:layout_constraintBottom_toBottomOf="@+id/dijtf"
-        app:layout_constraintEnd_toStartOf="@+id/dijtf" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num99"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:background="@drawable/btnaction"
+                    android:text="@string/_9"
+                    android:onClick="onClickNumber"
+                    android:layout_marginTop="16dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num6"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:background="@drawable/btnaction"
+                    android:text="6"
+                    android:onClick="onClickNumber"
+                    android:layout_marginTop="16dp"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num5"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="5"
-        app:layout_constraintBottom_toBottomOf="@+id/num6"
-        app:layout_constraintEnd_toStartOf="@+id/num6" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/num3"
+                    android:layout_width="@dimen/btnSize"
+                    android:layout_height="@dimen/btnSize"
+                    android:background="@drawable/btnaction"
+                    android:text="@string/_3"
+                    android:onClick="onClickNumber"
+                    android:layout_marginTop="16dp"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num4"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="@string/_4"
-        app:layout_constraintBottom_toBottomOf="@+id/num5"
-        app:layout_constraintEnd_toStartOf="@+id/num5"
-        app:layout_constraintStart_toStartOf="@+id/num9" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="56dp"
+                    android:layout_height="@dimen/btnSize"
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num2"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="2"
-        app:layout_constraintBottom_toBottomOf="@+id/num3"
-        app:layout_constraintEnd_toStartOf="@+id/num3" />
+                    android:background="@drawable/btnaction"
+                    android:text="@string/del"
+                    android:layout_marginTop="16dp"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/num1"
-        android:layout_width="@dimen/btnSize"
-        android:layout_height="@dimen/btnSize"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btnaction"
-        android:text="1"
-        app:layout_constraintBottom_toBottomOf="@+id/num2"
-        app:layout_constraintEnd_toStartOf="@+id/num2"
-        app:layout_constraintStart_toStartOf="@+id/num4" />
+            </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
